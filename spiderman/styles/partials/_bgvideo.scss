@@ -1,0 +1,27 @@
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-101.5deg, $blue-dark 27%, rgba(10,12,16,0.8), $blue-dark 73%);
+  }
+
+  @include responsive(){
+    height: auto;
+  }
+}
